@@ -1,0 +1,10 @@
+{
+  "cinnamon-theme": {
+    "name": "Windows 7 Aero AMOLED Black Edition",
+    "author": "Original Windows 7 Theme for Cinnamon contributors; AMOLED conversion",
+    "version": "1.1.0",
+    "type": "custom",
+    "thumbnail": "thumbnail.png",
+    "url": ""
+  }
+}

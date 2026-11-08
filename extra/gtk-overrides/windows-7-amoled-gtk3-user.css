@@ -1,0 +1,156 @@
+/* Legacy GTK3 named-color bridge: many older apps still request these names. */
+@define-color theme_bg_color #000000;
+@define-color theme_base_color #000000;
+@define-color theme_unfocused_bg_color #000000;
+@define-color theme_unfocused_base_color #000000;
+@define-color theme_fg_color #F2F2F2;
+@define-color theme_text_color #F2F2F2;
+@define-color theme_unfocused_fg_color #D0D0D0;
+@define-color theme_unfocused_text_color #D0D0D0;
+@define-color theme_selected_bg_color #245E91;
+@define-color theme_selected_fg_color #FFFFFF;
+@define-color borders #303030;
+@define-color unfocused_borders #252525;
+
+/* =====================================================================
+ * Windows 7 Aero AMOLED Black — final compatibility/cascade correction
+ * This block deliberately comes last: it overrides later Adwaita fallbacks.
+ * ===================================================================== */
+window,
+window.background,
+window.csd,
+window.solid-csd,
+dialog,
+messagedialog,
+.background,
+.background:backdrop,
+.gtkstyle-fallback,
+.gtkstyle-fallback:disabled {
+  color: #F2F2F2;
+  background-color: #000000;
+  background-image: none;
+}
+
+window:backdrop,
+window.background:backdrop,
+window.csd:backdrop,
+window.solid-csd:backdrop,
+dialog:backdrop,
+messagedialog:backdrop {
+  color: #D0D0D0;
+  background-color: #000000;
+  background-image: none;
+}
+
+.view,
+view,
+iconview,
+treeview.view,
+list,
+listview,
+.content-view,
+.content-view.view,
+columnview,
+gridview,
+flowbox,
+viewport,
+scrolledwindow,
+textview,
+textview > text,
+stack,
+notebook,
+notebook > stack,
+frame,
+frame > border,
+.sidebar,
+assistant .sidebar,
+stacksidebar,
+filechooser,
+filechooser .view,
+filechooser .sidebar,
+filechooser placessidebar,
+filechooser placessidebar list,
+placesview,
+placesview .view,
+.nemo-window .sidebar,
+.nemo-window treeview.view,
+.nautilus-window .view {
+  color: #F2F2F2;
+  background-color: #000000;
+  background-image: none;
+}
+
+.view:backdrop,
+view:backdrop,
+iconview:backdrop,
+treeview.view:backdrop,
+list:backdrop,
+listview:backdrop,
+columnview:backdrop,
+gridview:backdrop,
+flowbox:backdrop,
+viewport:backdrop,
+scrolledwindow:backdrop,
+textview:backdrop,
+textview > text:backdrop,
+filechooser .view:backdrop,
+filechooser placessidebar:backdrop {
+  color: #D0D0D0;
+  background-color: #000000;
+  background-image: none;
+}
+
+/* Restore the intended Windows 7 Aero glass headerbar instead of the later
+ * generic charcoal/Adwaita gradient. Includes both GtkHeaderBar and generic
+ * .titlebar implementations, plus inactive/backdrop windows. */
+window.csd headerbar,
+window.csd headerbar.titlebar,
+headerbar,
+.titlebar,
+.titlebar:not(headerbar) {
+  color: #FFFFFF;
+  background-color: #000000;
+  background-image: linear-gradient(to bottom, #365779 0%, #253A4E 42%, #172232 100%);
+  border-color: #3B5B78;
+  box-shadow: inset 1px 0 rgba(255,255,255,0.48),
+              inset -1px 0 rgba(255,255,255,0.48),
+              inset 0 1px rgba(255,255,255,0.50),
+              inset 0 -1px rgba(0,0,0,0.90);
+  text-shadow: 0 1px #000000;
+}
+
+window.csd headerbar:backdrop,
+headerbar:backdrop,
+.titlebar:backdrop,
+.titlebar:not(headerbar):backdrop {
+  color: #E0E0E0;
+  background-color: #000000;
+  background-image: linear-gradient(to bottom, #1A2532 0%, #151C25 48%, #080808 100%);
+  border-color: #252F3A;
+  box-shadow: inset 1px 0 rgba(255,255,255,0.22),
+              inset -1px 0 rgba(255,255,255,0.22),
+              inset 0 1px rgba(255,255,255,0.24),
+              inset 0 -1px rgba(0,0,0,0.95);
+}
+
+headerbar .title,
+headerbar .subtitle,
+headerbar label,
+.titlebar .title,
+.titlebar .subtitle,
+.titlebar label {
+  color: #FFFFFF;
+  text-shadow: 0 1px #000000;
+}
+
+/* Avoid legacy light inset surfaces in GTK 3's CSD frame. */
+.solid-csd decoration,
+.solid-csd decoration:backdrop,
+.background.csd,
+.background.csd:backdrop,
+messagedialog .background.csd {
+  background-color: #000000;
+  background-image: none;
+  border-color: #303030;
+  box-shadow: none;
+}

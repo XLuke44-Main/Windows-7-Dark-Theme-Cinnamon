@@ -1,0 +1,7 @@
+/*
+ * Windows 7 Aero AMOLED Black — Libadwaita / Libadapta widget base.
+ * Reuse the theme's GTK4 widgets and client-side decoration resources, then
+ * apply the library-specific palette and card/dialog/menu selectors.
+ */
+@import url("../gtk-4.0/gtk.css");
+@import url("../extra/libadwaita/windows-7-aero-amoled.css");
