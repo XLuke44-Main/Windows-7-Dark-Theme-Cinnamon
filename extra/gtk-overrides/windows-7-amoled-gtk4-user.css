@@ -1,0 +1,142 @@
+/* =====================================================================
+ * Windows 7 Aero AMOLED Black — final compatibility/cascade correction
+ * ===================================================================== */
+window,
+window.background,
+window.csd,
+window.solid-csd,
+window.dialog,
+dialog,
+messagedialog,
+.background,
+.background:backdrop {
+  color: #F2F2F2;
+  background-color: #000000;
+  background-image: none;
+}
+
+window:backdrop,
+window.background:backdrop,
+window.csd:backdrop,
+window.solid-csd:backdrop,
+window.dialog:backdrop,
+dialog:backdrop,
+messagedialog:backdrop {
+  color: #D0D0D0;
+  background-color: #000000;
+  background-image: none;
+}
+
+.view,
+view,
+iconview,
+treeview.view,
+list,
+listview,
+columnview,
+gridview,
+flowbox,
+textview,
+textview > text,
+viewport,
+scrolledwindow,
+stack,
+notebook,
+notebook > stack,
+frame,
+frame > border,
+.sidebar,
+assistant .sidebar,
+stacksidebar,
+filechooser,
+filechooser .view,
+filechooser .sidebar,
+filechooser placessidebar,
+filechooser placessidebar list,
+placesview,
+placesview .view,
+card,
+.card,
+.boxed-list,
+.boxed-list > row,
+.boxed-list-separators,
+.boxed-list-separators > row,
+preferencesgroup > list,
+preferencesgroup > box,
+preferencespage {
+  color: #F2F2F2;
+  background-color: #000000;
+  background-image: none;
+}
+
+.view:backdrop,
+view:backdrop,
+iconview:backdrop,
+treeview.view:backdrop,
+list:backdrop,
+listview:backdrop,
+columnview:backdrop,
+gridview:backdrop,
+flowbox:backdrop,
+textview:backdrop,
+textview > text:backdrop,
+viewport:backdrop,
+scrolledwindow:backdrop,
+filechooser .view:backdrop,
+filechooser placessidebar:backdrop,
+card:backdrop,
+.card:backdrop {
+  color: #D0D0D0;
+  background-color: #000000;
+  background-image: none;
+}
+
+/* Windows 7 green-glass titlebar, for GtkHeaderBar and generic titlebar CSD. */
+window.csd headerbar,
+window.csd headerbar.titlebar,
+headerbar,
+.titlebar,
+.titlebar:not(headerbar) {
+  color: #FFFFFF;
+  background-color: #000000;
+  background-image: linear-gradient(to bottom, #43634C 0%, #2D4032 42%, #1C2920 100%);
+  border-color: #47644F;
+  box-shadow: inset 1px 0 rgba(255,255,255,0.48),
+              inset -1px 0 rgba(255,255,255,0.48),
+              inset 0 1px rgba(255,255,255,0.50),
+              inset 0 -1px rgba(0,0,0,0.90);
+  text-shadow: 0 1px #000000;
+}
+
+window.csd headerbar:backdrop,
+headerbar:backdrop,
+.titlebar:backdrop,
+.titlebar:not(headerbar):backdrop {
+  color: #E0E0E0;
+  background-color: #000000;
+  background-image: linear-gradient(to bottom, #1E2A22 0%, #181F1A 48%, #080808 100%);
+  border-color: #28322B;
+  box-shadow: inset 1px 0 rgba(255,255,255,0.22),
+              inset -1px 0 rgba(255,255,255,0.22),
+              inset 0 1px rgba(255,255,255,0.24),
+              inset 0 -1px rgba(0,0,0,0.95);
+}
+
+headerbar .title,
+headerbar .subtitle,
+headerbar label,
+.titlebar .title,
+.titlebar .subtitle,
+.titlebar label {
+  color: #FFFFFF;
+  text-shadow: 0 1px #000000;
+}
+
+window.solid-csd,
+window.solid-csd:backdrop {
+  color: #F2F2F2;
+  background-color: #000000;
+  background-image: none;
+  border-color: #303030;
+  box-shadow: inset 0 0 0 1px #303030;
+}

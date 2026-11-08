@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Windows 7 Aero AMOLED Black Edition
+Comment=Windows 7 Aero UI for Linux with a true-black AMOLED palette
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Windows-7-Theme-Cinnamon-AMOLED-Black
+MetacityTheme=Windows-7-Theme-Cinnamon-AMOLED-Black
+ButtonLayout=menu:minimize,maximize,close

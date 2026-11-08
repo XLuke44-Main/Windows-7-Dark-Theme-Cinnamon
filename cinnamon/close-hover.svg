@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+<defs><linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#FF9A9E"/><stop offset=".42" stop-color="#E3444E"/><stop offset="1" stop-color="#710D19"/></linearGradient><linearGradient id="shine" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#FFF" stop-opacity=".28"/><stop offset="1" stop-color="#FFF" stop-opacity="0"/></linearGradient></defs>
+<rect x=".5" y=".5" width="25" height="25" rx="3" fill="url(#glass)" stroke="#FFB4B6"/>
+<path d="M2 3.5Q2 1.5 4 1.5H22Q24 1.5 24 3.5V10H2Z" fill="url(#shine)"/>
+<path d="M8.1 7.2L18.8 17.9M18.8 7.2L8.1 17.9" stroke="#080709" stroke-width="3.3" stroke-linecap="square"/>
+<path d="M7.7 6.6L18.2 17.1M18.2 6.6L7.7 17.1" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="square"/>
+</svg>

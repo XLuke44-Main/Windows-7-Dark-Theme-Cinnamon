@@ -1,0 +1,8 @@
+/*
+ * Windows 7 Aero AMOLED Black — dark palette.
+ * Kept separate because the Mint-patched theme loader reads defaults and widget
+ * rules as distinct files. The imported palette supplies the Adw CSS variables.
+ */
+@import url("../extra/libadwaita/windows-7-aero-amoled.css");
+
+:root { --window-bg-color: #000000; --view-bg-color: #000000; --headerbar-bg-color: #000000; --sidebar-bg-color: #000000; --card-bg-color: #000000; --dialog-bg-color: #000000; --popover-bg-color: #000000; }

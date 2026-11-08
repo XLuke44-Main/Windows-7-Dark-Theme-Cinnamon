@@ -1,0 +1,516 @@
+/*
+ * Windows 7 Aero AMOLED Black — Libadwaita bridge
+ *
+ * Install with ../.. /install-libadwaita.sh (from the theme root).
+ * This file is intended for ~/.config/gtk-4.0/gtk.css via @import,
+ * not as a substitute for the regular gtk-4.0 theme stylesheet.
+ *
+ * Libadwaita reads its own named color palette. These variables replace the
+ * stock dark-Adwaita charcoal/grey surfaces with the theme's black/graphite
+ * hierarchy while retaining readable foregrounds and restrained Win7 green.
+ */
+
+:root {
+  /* Core windows and content */
+  --window-bg-color: #000000;
+  --window-fg-color: #F2F2F2;
+  --view-bg-color: #000000;
+  --view-fg-color: #F2F2F2;
+
+  /* Titlebars / toolbars */
+  --headerbar-bg-color: #000000;
+  --headerbar-fg-color: #F2F2F2;
+  --headerbar-border-color: #202020;
+  --headerbar-backdrop-color: #030303;
+  --headerbar-shade-color: rgba(0, 0, 0, 0.82);
+  --headerbar-darker-shade-color: rgba(0, 0, 0, 0.94);
+
+  /* Sidebar surfaces */
+  --sidebar-bg-color: #000000;
+  --sidebar-fg-color: #EAEAEA;
+  --sidebar-backdrop-color: #030303;
+  --sidebar-border-color: #1D1D1D;
+  --sidebar-shade-color: rgba(0, 0, 0, 0.62);
+
+  --secondary-sidebar-bg-color: #000000;
+  --secondary-sidebar-fg-color: #EAEAEA;
+  --secondary-sidebar-backdrop-color: #010101;
+  --secondary-sidebar-border-color: #181818;
+  --secondary-sidebar-shade-color: rgba(0, 0, 0, 0.70);
+
+  /* Cards and boxed lists: near-black, not default translucent grey */
+  --card-bg-color: #000000;
+  --card-fg-color: #F0F0F0;
+  --card-shade-color: #242424;
+
+  /* Dialogs, popovers and menus */
+  --dialog-bg-color: #000000;
+  --dialog-fg-color: #F2F2F2;
+  --popover-bg-color: #000000;
+  --popover-fg-color: #F2F2F2;
+  --popover-shade-color: rgba(0, 0, 0, 0.82);
+
+  /* Selection and interactive accents */
+  --accent-bg-color: #3C704B;
+  --accent-fg-color: #FFFFFF;
+  --accent-color: #8EC79E;
+  --active-toggle-bg-color: #264A30;
+  --active-toggle-fg-color: #FFFFFF;
+
+  /* Semantic buttons */
+  --destructive-bg-color: #8B2631;
+  --destructive-fg-color: #FFFFFF;
+  --success-bg-color: #174B39;
+  --success-fg-color: #FFFFFF;
+  --warning-bg-color: #77500B;
+  --warning-fg-color: #FFFFFF;
+  --error-bg-color: #84232D;
+  --error-fg-color: #FFFFFF;
+
+  /* Overview / previews */
+  --overview-bg-color: #000000;
+  --overview-fg-color: #F2F2F2;
+  --thumbnail-bg-color: #000000;
+  --thumbnail-fg-color: #F2F2F2;
+
+  /* Less common system surfaces */
+  --popover-border-color: #202020;
+}
+
+/* Main content planes */
+window,
+window.background,
+.background {
+  background-color: #000000;
+  color: #F2F2F2;
+}
+
+view,
+.view,
+textview,
+textview > text,
+list,
+listview,
+gridview,
+columnview,
+treeview,
+viewport,
+scrolledwindow > viewport {
+  background-color: #000000;
+  color: #F2F2F2;
+}
+
+/* Libadwaita cards, preference groups and screenshot-mode panels */
+card,
+.card,
+.boxed-list,
+.boxed-list > row,
+.boxed-list-separators,
+.boxed-list-separators > row,
+preferencesgroup,
+preferencesgroup > box,
+preferencesgroup > list,
+preferencespage,
+.preferences-group,
+frame.card {
+  background-color: #000000;
+  color: #F0F0F0;
+  border-color: #202020;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.025);
+}
+
+/* Keep row separators visible but restrained */
+separator,
+listview > row + row,
+.boxed-list > row + row,
+.boxed-list-separators > row + row {
+  color: #262626;
+  background-color: #262626;
+  border-color: #262626;
+}
+
+/* Headerbars and toolbar surfaces */
+headerbar,
+.titlebar,
+toolbarview > headerbar,
+toolbarview > actionbar,
+actionbar,
+toolbar {
+  color: #F2F2F2;
+  background-color: #000000;
+  background-image: linear-gradient(to bottom, #43634C 0%, #2D4032 42%, #1C2920 100%);
+  border-color: #47644F;
+  box-shadow: inset 1px 0 rgba(255,255,255,0.48),
+              inset -1px 0 rgba(255,255,255,0.48),
+              inset 0 1px rgba(255,255,255,0.50),
+              inset 0 -1px rgba(0,0,0,0.90);
+}
+
+headerbar:backdrop,
+.titlebar:backdrop,
+toolbarview > headerbar:backdrop {
+  background-color: #000000;
+  background-image: linear-gradient(to bottom, #0A0A0A, #030303);
+}
+
+/* Buttons: dark Aero metallic glass, without pale/default Adwaita plates */
+button,
+.button {
+  color: #EDEDED;
+  background-color: #171717;
+  background-image: linear-gradient(to bottom, #292929, #151515 54%, #0B0B0B);
+  border: 1px solid #303030;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.10),
+              inset 0 -1px rgba(0, 0, 0, 0.78);
+}
+
+button:hover,
+.button:hover {
+  color: #FFFFFF;
+  background-color: #222222;
+  background-image: linear-gradient(to bottom, #383838, #202020 54%, #111111);
+  border-color: #4E6755;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.14);
+}
+
+button:active,
+button:checked,
+.button:active,
+.button:checked {
+  color: #FFFFFF;
+  background-color: #25462E;
+  background-image: linear-gradient(to bottom, #3C704B, #1D3925);
+  border-color: #44694E;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.72);
+}
+
+button:disabled,
+.button:disabled {
+  color: #777777;
+  background-color: #000000;
+  background-image: linear-gradient(to bottom, #101010, #050505);
+  border-color: #1B1B1B;
+  box-shadow: none;
+}
+
+/* Flat headerbar/menu buttons stay flat unless hovered */
+button.flat,
+button.flat:backdrop,
+headerbar button,
+headerbar button:backdrop {
+  background-color: transparent;
+  background-image: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+button.flat:hover,
+headerbar button:hover {
+  background-color: #1A1A1A;
+  background-image: linear-gradient(to bottom, #252525, #111111);
+  border-color: #303030;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
+}
+
+button.flat:active,
+button.flat:checked,
+headerbar button:active,
+headerbar button:checked {
+  background-color: #25462E;
+  background-image: linear-gradient(to bottom, #335C3E, #193220);
+  border-color: #41654B;
+}
+
+/* Segmented / mode selectors: the selected capture mode uses Win7 green */
+toggle-group,
+.toggle-group,
+.linked {
+  color: #EAEAEA;
+  background-color: #000000;
+  border-color: #242424;
+}
+
+togglebutton,
+button.toggle,
+.toggle-group button,
+.linked > button {
+  color: #E6E6E6;
+  background-color: #111111;
+  background-image: linear-gradient(to bottom, #1B1B1B, #090909);
+  border-color: #252525;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.035);
+}
+
+togglebutton:hover,
+button.toggle:hover,
+.toggle-group button:hover,
+.linked > button:hover {
+  background-color: #202020;
+  background-image: linear-gradient(to bottom, #292929, #111111);
+  border-color: #303030;
+}
+
+togglebutton:checked,
+button.toggle:checked,
+.toggle-group button:checked,
+.linked > button:checked,
+.toggle-group button:selected,
+.linked > button:selected {
+  color: #FFFFFF;
+  background-color: #264A30;
+  background-image: linear-gradient(to bottom, #3C704B, #1D3925);
+  border-color: #456950;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.10),
+              inset 0 -1px rgba(0, 0, 0, 0.58);
+}
+
+/* Inputs, search fields, text editors and numeric controls */
+entry,
+searchentry,
+spinbutton,
+spinbutton entry,
+textview,
+textview > text,
+combobox,
+dropdown {
+  color: #F2F2F2;
+  background-color: #000000;
+  border-color: #292929;
+  caret-color: #FFFFFF;
+}
+
+entry:focus,
+searchentry:focus,
+spinbutton:focus,
+textview:focus-within {
+  border-color: #43664D;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.82);
+}
+
+textview > text selection {
+  color: #FFFFFF;
+  background-color: #3C704B;
+}
+
+entry:disabled,
+searchentry:disabled,
+spinbutton:disabled {
+  color: #777777;
+  background-color: #000000;
+  border-color: #1C1C1C;
+}
+
+/* Switches, checks, radio controls, scales and progress indicators */
+switch {
+  color: #EAEAEA;
+  background-color: #101010;
+  border-color: #333333;
+}
+
+switch:checked {
+  color: #FFFFFF;
+  background-color: #2A5135;
+  border-color: #456950;
+}
+
+checkbutton check,
+checkbutton radio,
+check,
+radio {
+  color: #FFFFFF;
+  background-color: #101010;
+  border-color: #414141;
+}
+
+checkbutton check:checked,
+checkbutton radio:checked,
+check:checked,
+radio:checked {
+  color: #FFFFFF;
+  background-color: #2F5B3B;
+  border-color: #598566;
+}
+
+scale trough,
+progressbar trough,
+levelbar trough {
+  background-color: #000000;
+  border-color: #222222;
+}
+
+scale slider,
+scrollbar slider {
+  background-color: #292929;
+  background-image: linear-gradient(to bottom, #414141, #1A1A1A);
+  border-color: #3C3C3C;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08);
+}
+
+scale slider:hover,
+scrollbar slider:hover {
+  background-color: #3D5243;
+  border-color: #56755E;
+}
+
+progressbar progress,
+levelbar block.filled {
+  background-color: #3C704B;
+  background-image: linear-gradient(to bottom, #60956F, #2A5336);
+}
+
+/* Menus, popovers, tooltips and dialogs */
+popover,
+popover.background,
+popover contents,
+popover > contents,
+menu,
+.menu,
+tooltip,
+dialog,
+messagedialog,
+alertdialog,
+window.dialog {
+  color: #F2F2F2;
+  background-color: #000000;
+  border-color: #242424;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.82);
+}
+
+popover modelbutton,
+menuitem,
+.menuitem {
+  color: #EAEAEA;
+  background-color: transparent;
+}
+
+popover modelbutton:hover,
+menuitem:hover,
+.menuitem:hover {
+  color: #FFFFFF;
+  background-color: #1A1A1A;
+}
+
+popover modelbutton:checked,
+menuitem:checked {
+  color: #FFFFFF;
+  background-color: #25462E;
+}
+
+/* File chooser / document and navigation surfaces */
+filechooser,
+filechooser .view,
+filechooser placessidebar,
+placesview,
+navigation-sidebar,
+.sidebar,
+.sidebar-pane {
+  color: #EAEAEA;
+  background-color: #000000;
+}
+
+navigation-sidebar row:hover,
+navigation-sidebar row:selected,
+.sidebar row:hover,
+.sidebar row:selected {
+  color: #FFFFFF;
+  background-color: #25462E;
+}
+
+/* List rows and inactive/backdrop state */
+row,
+listview row,
+columnview row,
+treeview row {
+  color: #EAEAEA;
+  background-color: transparent;
+}
+
+row:hover,
+listview row:hover,
+columnview row:hover,
+treeview row:hover {
+  background-color: #151515;
+}
+
+row:selected,
+listview row:selected,
+columnview row:selected,
+treeview row:selected {
+  color: #FFFFFF;
+  background-color: #25462E;
+}
+
+:backdrop,
+window:backdrop,
+window.background:backdrop,
+headerbar:backdrop,
+card:backdrop,
+.boxed-list:backdrop {
+  color: #D0D0D0;
+}
+
+/* App-level separator widgets remain graphite, not inherited silver */
+separator.horizontal,
+separator.vertical,
+paned > separator {
+  background-color: #252525;
+  color: #252525;
+  border-color: #252525;
+}
+
+/* Keep screenshot/application-specific content neutral black; retain native icons. */
+
+
+/* Final strict- AMOLED layer for modern Libadwaita applications. User CSS is
+ * loaded at GTK's USER provider priority; also beats ordinary app
+ * declarations while leaving explicit custom drawing outside GTK CSS alone. */
+:root {
+  --window-bg-color: #000000;
+  --view-bg-color: #000000;
+  --sidebar-bg-color: #000000;
+  --secondary-sidebar-bg-color: #000000;
+  --card-bg-color: #000000;
+  --dialog-bg-color: #000000;
+  --popover-bg-color: #000000;
+  --overview-bg-color: #000000;
+  --thumbnail-bg-color: #000000;
+  --headerbar-bg-color: #000000;
+}
+window,
+window.background,
+.background,
+.background:backdrop,
+view,
+.view,
+textview,
+textview > text,
+listview,
+gridview,
+columnview,
+viewport,
+scrolledwindow > viewport,
+.sidebar,
+card,
+.card,
+.boxed-list,
+.boxed-list > row,
+preferencesgroup > list,
+preferencesgroup > box,
+preferencespage {
+  background-color: #000000;
+  background-image: none;
+}
+headerbar,
+.titlebar,
+actionbar,
+toolbarview > headerbar {
+  background-color: #000000;
+  background-image: linear-gradient(to bottom, #43634C 0%, #2D4032 42%, #1C2920 100%);
+}
+headerbar:backdrop,
+.titlebar:backdrop,
+actionbar:backdrop,
+toolbarview > headerbar:backdrop {
+  background-color: #000000;
+  background-image: linear-gradient(to bottom, #1E2A22 0%, #181F1A 48%, #080808 100%);
+}

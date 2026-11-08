@@ -1,0 +1,14 @@
+/*
+ * High-contrast variant: retain the black surfaces and add a clear soft-green
+ * keyboard focus ring rather than reverting to the stock light Adwaita palette.
+ */
+@import url("base.css");
+
+:focus-visible,
+button:focus-visible,
+entry:focus-visible,
+switch:focus-visible,
+togglebutton:focus-visible {
+  outline: 2px solid #8EC79E;
+  outline-offset: 2px;
+}

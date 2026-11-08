@@ -1,0 +1,7 @@
+/*
+ * Windows 7 Aero AMOLED Black — force the selected theme to remain AMOLED
+ * black even when an individual application requests the light color scheme.
+ */
+@import url("../extra/libadwaita/windows-7-aero-amoled.css");
+
+:root { --window-bg-color: #000000; --view-bg-color: #000000; --headerbar-bg-color: #000000; --sidebar-bg-color: #000000; --card-bg-color: #000000; --dialog-bg-color: #000000; --popover-bg-color: #000000; }
